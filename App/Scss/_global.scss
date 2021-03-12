@@ -38,19 +38,21 @@ body {
         }
     }
 
-    button {
+    button, .button {
         font-family: 'Poppins', sans-serif;
         border-radius: 15px;
         border: none;
         color: white;
+
+        &-try{
+            padding: 5px 60px;
+            background-color: $blue;
+            font-size: 16px;
+            box-shadow: 0px 8px hsla(0, 0%, 0%, 0.13);
+        }
     }
 
-    .button-try{
-        padding: 5px 80px;
-        background-color: $blue;
-        font-size: 16px;
-        box-shadow: 0px 8px hsla(0, 0%, 0%, 0.13);
-    }
+    
 
     form {
         margin-top: 25px;
@@ -58,6 +60,19 @@ body {
         border-radius: 15px;
         padding: 25px;
         text-align: center;
+
+        p{
+            margin: 0;
+            font-size: 12px;
+            color: rgb(197, 197, 197);
+            display: inline;
+
+                .red {
+                text-decoration: none;
+                color: $red;
+                font-weight: 700;
+            }
+        }
         
 
         input {
@@ -69,6 +84,14 @@ body {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             margin-bottom: 17px;
+
+            &[type=submit] {
+                border: none;
+                width: 95%;
+                color: white;
+                background-color: $green;
+                box-shadow: 0px 5px hsl(154, 59, 46);;
+            }
         }
     } 
 }
