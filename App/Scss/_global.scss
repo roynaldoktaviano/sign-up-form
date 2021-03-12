@@ -3,14 +3,72 @@ html {
     width: 100%;
     box-sizing: border-box;
     background-color: $red;
-    background-image: url(../../images/bg-intro-desktop.png);
+    background-image: url(../../images/bg-intro-mobile.png);
     font-family: 'Poppins', sans-serif;
 
-    @include breakpoint-up(large) {
-        
+    @include breakpoint-up(medium) {
+        background-image: url(../../images/bg-intro-desktop.png);
     }
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
-    padding: 120px 165px;
+    padding: 4.0625rem 1.875rem;
+
+    @include breakpoint-up(large) {
+        padding: 7.5rem 10.3125rem;
+    }
+
+    .text {
+        color: white;
+        text-align: center;
+        margin-bottom: 70px;
+
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        border-radius: 15px;
+        border: none;
+        color: white;
+    }
+
+    .button-try{
+        padding: 5px 80px;
+        background-color: $blue;
+        font-size: 16px;
+        box-shadow: 0px 8px hsla(0, 0%, 0%, 0.13);
+    }
+
+    form {
+        margin-top: 25px;
+        background:white;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        
+
+        input {
+            width: 80%;
+            height: 55px;
+            padding: 0 20px;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+    } 
 }
