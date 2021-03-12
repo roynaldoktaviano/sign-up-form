@@ -21,6 +21,9 @@ body {
 
     @include breakpoint-up(large) {
         padding: 7.5rem 10.3125rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .text {
@@ -36,6 +39,22 @@ body {
             font-size: 1rem;
             line-height: 1.5;
         }
+
+        @include breakpoint-up(large) {
+            text-align: left;
+            margin-right: 75px;
+
+            h1 {
+                font-size: 44px;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        
     }
 
     button, .button {
@@ -43,12 +62,23 @@ body {
         border-radius: 15px;
         border: none;
         color: white;
+        transition: 0.2s ease-in-out;
 
         &-try{
             padding: 5px 60px;
             background-color: $blue;
             font-size: 16px;
             box-shadow: 0px 8px hsla(0, 0%, 0%, 0.13);
+
+            @include breakpoint-up(large){
+                width: 100%;
+                padding: 5px 55px;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: hsl(248, 49%, 45%); ;
+                }
+            }
         }
     }
 
@@ -67,16 +97,27 @@ body {
             color: rgb(197, 197, 197);
             display: inline;
 
+            @include breakpoint-up(large){
+                display: block;
+                font-size: 11px;
+            }
+
                 .red {
                 text-decoration: none;
                 color: $red;
                 font-weight: 700;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    color: hsl(0, 100%, 63%);;
+                }
             }
         }
         
 
         input {
-            width: 80%;
+            box-sizing: border-box;
+            width: 100%;
             height: 55px;
             padding: 0 20px;
             border: 1px solid rgb(204, 204, 204);
@@ -84,13 +125,29 @@ body {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             margin-bottom: 17px;
+            transition: 0.2s ease-in-out;
+
+            &:focus {
+                outline: none;
+                border-color: $blue;
+            }
+
 
             &[type=submit] {
                 border: none;
-                width: 95%;
+                width: 100%;
                 color: white;
                 background-color: $green;
-                box-shadow: 0px 5px hsl(154, 59, 46);;
+                box-shadow: 0px 5px hsl(154, 59, 46);
+                transition: 0.2s ease-in-out;
+
+                @include breakpoint-up(large){
+                    font-weight: 600;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
             }
         }
     } 

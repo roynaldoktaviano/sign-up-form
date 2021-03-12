@@ -1,8 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #ff7a7a;
   background-image: url(../../images/bg-intro-mobile.png);
   font-family: 'Poppins', sans-serif;
@@ -26,6 +25,9 @@ body {
 @media (min-width: 64em) {
   .container {
     padding: 7.5rem 10.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -44,19 +46,44 @@ body {
   line-height: 1.5;
 }
 
+@media (min-width: 64em) {
+  .container .text {
+    text-align: left;
+    margin-right: 75px;
+  }
+  .container .text h1 {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+  .container .text p {
+    font-size: 14px;
+  }
+}
+
 .container button, .container .button {
   font-family: 'Poppins', sans-serif;
   border-radius: 15px;
   border: none;
   color: white;
+  transition: 0.2s ease-in-out;
 }
 
 .container button-try, .container .button-try {
   padding: 5px 60px;
   background-color: #6055a5;
   font-size: 16px;
-  -webkit-box-shadow: 0px 8px rgba(0, 0, 0, 0.13);
-          box-shadow: 0px 8px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.13);
+}
+
+@media (min-width: 64em) {
+  .container button-try, .container .button-try {
+    width: 100%;
+    padding: 5px 55px;
+    font-size: 14px;
+  }
+  .container button-try:hover, .container .button-try:hover {
+    background-color: #4a3bab;
+  }
 }
 
 .container form {
@@ -74,14 +101,27 @@ body {
   display: inline;
 }
 
+@media (min-width: 64em) {
+  .container form p {
+    display: block;
+    font-size: 11px;
+  }
+}
+
 .container form p .red {
   text-decoration: none;
   color: #ff7a7a;
   font-weight: 700;
+  transition: 0.2s ease-in-out;
+}
+
+.container form p .red:hover {
+  color: #ff4242;
 }
 
 .container form input {
-  width: 80%;
+  box-sizing: border-box;
+  width: 100%;
   height: 55px;
   padding: 0 20px;
   border: 1px solid #cccccc;
@@ -89,14 +129,29 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   margin-bottom: 17px;
+  transition: 0.2s ease-in-out;
+}
+
+.container form input:focus {
+  outline: none;
+  border-color: #6055a5;
 }
 
 .container form input[type=submit] {
   border: none;
-  width: 95%;
+  width: 100%;
   color: white;
   background-color: #38cc8c;
-  -webkit-box-shadow: 0px 5px #30bb7f;
-          box-shadow: 0px 5px #30bb7f;
+  box-shadow: 0px 5px #30bb7f;
+  transition: 0.2s ease-in-out;
+}
+
+@media (min-width: 64em) {
+  .container form input[type=submit] {
+    font-weight: 600;
+  }
+  .container form input[type=submit]:hover {
+    opacity: 0.7;
+  }
 }
 /*# sourceMappingURL=style.css.map */
