@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $red;
+    background-image: url(../../images/bg-intro-desktop.png);
+    font-family: 'Poppins', sans-serif;
+
+    @include breakpoint-up(large) {
+        
+    }
+}
+
+.container {
+    padding: 120px 165px;
+}

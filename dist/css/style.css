@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ff7a7a;
+  background-image: url(../../images/bg-intro-desktop.png);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  padding: 120px 165px;
+}
+/*# sourceMappingURL=style.css.map */
