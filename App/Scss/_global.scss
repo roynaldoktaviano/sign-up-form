@@ -127,6 +127,14 @@ body {
             margin-bottom: 17px;
             transition: 0.2s ease-in-out;
 
+            // &:invalid {
+            //     border: 2px solid $red;
+            // }
+
+            // &:valid {
+            //     border: 1px solid rgb(204, 204, 204);
+            // }
+
             &:focus {
                 outline: none;
                 border-color: $blue;
