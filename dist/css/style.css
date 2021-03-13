@@ -1,7 +1,8 @@
 html {
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #ff7a7a;
   background-image: url(../../images/bg-intro-mobile.png);
   font-family: 'Poppins', sans-serif;
@@ -25,9 +26,15 @@ body {
 @media (min-width: 64em) {
   .container {
     padding: 7.5rem 10.3125rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -56,7 +63,7 @@ body {
     line-height: 1.2;
   }
   .container .text p {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -65,6 +72,7 @@ body {
   border-radius: 15px;
   border: none;
   color: white;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
@@ -72,7 +80,8 @@ body {
   padding: 5px 60px;
   background-color: #6055a5;
   font-size: 16px;
-  box-shadow: 0px 8px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 8px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 8px rgba(0, 0, 0, 0.13);
 }
 
 @media (min-width: 64em) {
@@ -84,6 +93,11 @@ body {
   .container button-try:hover, .container .button-try:hover {
     background-color: #4a3bab;
   }
+}
+
+.container .sign-up-form {
+  text-align: center;
+  width: 100%;
 }
 
 .container form {
@@ -108,19 +122,89 @@ body {
   }
 }
 
-.container form p .red {
+.container form .term {
+  text-align: center;
+}
+
+.container form .term p {
+  margin: 0;
+  font-size: 12px;
+  color: #c5c5c5;
+  display: inline;
+}
+
+@media (min-width: 64em) {
+  .container form .term p {
+    display: block;
+    font-size: 11px;
+  }
+}
+
+.container form .term p .red {
   text-decoration: none;
   color: #ff7a7a;
   font-weight: 700;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-.container form p .red:hover {
+.container form .term p .red:hover {
   color: #ff4242;
 }
 
-.container form input {
-  box-sizing: border-box;
+.container form .input-col {
+  position: relative;
+  text-align: right;
+  margin-bottom: 17px;
+}
+
+.container form .input-col.error input {
+  border-color: #ff7a7a;
+  border-width: 2px;
+}
+
+.container form .input-col.error input::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.container form .input-col.error input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.container form .input-col.error input::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.container form .input-col.error input::placeholder {
+  opacity: 0;
+}
+
+.container form .input-col.error .error-icon {
+  display: block;
+}
+
+.container form .input-col.error .error-text {
+  display: block;
+}
+
+.container form .input-col .error-icon {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  display: none;
+}
+
+.container form .input-col .error-text {
+  color: #ff7a7a;
+  font-style: italic;
+  margin-top: 5px;
+  font-weight: 500;
+  display: none;
+}
+
+.container form .input-col input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 55px;
   padding: 0 20px;
@@ -128,11 +212,15 @@ body {
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  margin-bottom: 17px;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-.container form input:focus {
+.container form .input-col input.error {
+  border: 2px solid #ff7a7a;
+}
+
+.container form .input-col input:focus {
   outline: none;
   border-color: #6055a5;
 }
@@ -140,10 +228,17 @@ body {
 .container form input[type=submit] {
   border: none;
   width: 100%;
+  height: 55px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   color: white;
+  padding: 0 20px;
   background-color: #38cc8c;
-  box-shadow: 0px 5px #30bb7f;
+  -webkit-box-shadow: 0px 5px #30bb7f;
+          box-shadow: 0px 5px #30bb7f;
+  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  margin-bottom: 17px;
 }
 
 @media (min-width: 64em) {

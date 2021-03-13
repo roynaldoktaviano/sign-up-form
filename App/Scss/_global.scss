@@ -50,7 +50,7 @@ body {
             }
 
             p {
-                font-size: 14px;
+                font-size: 15px;
             }
         }
 
@@ -82,7 +82,10 @@ body {
         }
     }
 
-    
+    .sign-up-form {
+        text-align: center;
+        width: 100%;
+    }
 
     form {
         margin-top: 25px;
@@ -91,70 +94,131 @@ body {
         padding: 25px;
         text-align: center;
 
-        p{
+        p {
             margin: 0;
             font-size: 12px;
             color: rgb(197, 197, 197);
             display: inline;
-
+    
             @include breakpoint-up(large){
                 display: block;
                 font-size: 11px;
             }
+        }
 
-                .red {
-                text-decoration: none;
-                color: $red;
-                font-weight: 700;
-                transition: 0.2s ease-in-out;
-
-                &:hover {
-                    color: hsl(0, 100%, 63%);;
+        .term {
+            text-align: center;
+            p{
+                margin: 0;
+                font-size: 12px;
+                color: rgb(197, 197, 197);
+                display: inline;
+    
+                @include breakpoint-up(large){
+                    display: block;
+                    font-size: 11px;
+                }
+    
+                    .red {
+                    text-decoration: none;
+                    color: $red;
+                    font-weight: 700;
+                    transition: 0.2s ease-in-out;
+    
+                    &:hover {
+                        color: hsl(0, 100%, 63%);;
+                    }
                 }
             }
         }
         
+        .input-col {
+            position: relative;
+            text-align: right;
+            margin-bottom: 17px;
 
-        input {
-            box-sizing: border-box;
+            &.error {
+                input {
+                    border-color: $red;
+                    border-width: 2px;
+
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+
+                .error-icon {
+                    display: block;
+                }
+
+                .error-text {
+                    display: block;
+                }
+            }
+            .error-icon {
+                position: absolute;
+                top: 15%;
+                right: 5%;
+                display: none;
+            }
+            .error-text {
+                color: $red;
+                font-style: italic;
+                margin-top: 5px;
+                font-weight: 500;
+                // text-align: left;
+                display: none;
+            }
+            input {
+                box-sizing: border-box;
+                width: 100%;
+                height: 55px;
+                padding: 0 20px;
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 5px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                // margin-bottom: 17px;
+                transition: 0.2s ease-in-out;
+    
+                // &:invalid {
+                //     border: 2px solid $red;
+                // }
+    
+                // &:valid {
+                //     border: 1px solid rgb(204, 204, 204);
+                // }
+    
+                &.error {
+                    border: 2px solid $red;
+                    
+                }
+    
+                &:focus {
+                    outline: none;
+                    border-color: $blue;
+                }
+            }
+        }
+
+        input[type=submit] {
+            border: none;
             width: 100%;
             height: 55px;
-            padding: 0 20px;
-            border: 1px solid rgb(204, 204, 204);
-            border-radius: 5px;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            margin-bottom: 17px;
+            color: white;
+            padding: 0 20px;
+            background-color: $green;
+            box-shadow: 0px 5px hsl(154, 59, 46);
             transition: 0.2s ease-in-out;
+            margin-bottom: 17px;
 
-            // &:invalid {
-            //     border: 2px solid $red;
-            // }
+            @include breakpoint-up(large){
+                font-weight: 600;
 
-            // &:valid {
-            //     border: 1px solid rgb(204, 204, 204);
-            // }
-
-            &:focus {
-                outline: none;
-                border-color: $blue;
-            }
-
-
-            &[type=submit] {
-                border: none;
-                width: 100%;
-                color: white;
-                background-color: $green;
-                box-shadow: 0px 5px hsl(154, 59, 46);
-                transition: 0.2s ease-in-out;
-
-                @include breakpoint-up(large){
-                    font-weight: 600;
-
-                    &:hover {
-                        opacity: 0.7;
-                    }
+                &:hover {
+                    opacity: 0.7;
                 }
             }
         }
