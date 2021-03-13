@@ -45,7 +45,7 @@ body {
             margin-right: 75px;
 
             h1 {
-                font-size: 44px;
+                font-size: 46px;
                 line-height: 1.2;
             }
 
@@ -94,6 +94,10 @@ body {
         border-radius: 15px;
         padding: 25px;
         text-align: center;
+
+        @include breakpoint-up(medium) {
+            padding: 42px;
+        }
 
         p {
             margin: 0;

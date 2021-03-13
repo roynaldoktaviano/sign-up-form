@@ -59,7 +59,7 @@ body {
     margin-right: 75px;
   }
   .container .text h1 {
-    font-size: 44px;
+    font-size: 46px;
     line-height: 1.2;
   }
   .container .text p {
@@ -107,6 +107,12 @@ body {
   border-radius: 15px;
   padding: 25px;
   text-align: center;
+}
+
+@media (min-width: 40em) {
+  .container form {
+    padding: 42px;
+  }
 }
 
 .container form p {
